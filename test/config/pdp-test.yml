@@ -43,7 +43,7 @@ spring:
      - org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
   redis:
-    host: localhost
+    host: fk01
   data:
     redis:
       repositories:
