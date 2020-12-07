@@ -1,0 +1,59 @@
+server:
+ context-path: /zta-pdp
+zta:
+ jwt:
+  secretKey: 0ee44ca9-ac9c-4c5f-bb42-f5a396884cd4
+ base:
+  uri: http://localhost:8181
+ auth:
+  uri: http://mfa.paraview.cn
+  contextPath: /sso
+ redis:
+  cluster: true
+  address:   
+   - "redis://192.168.203.128:7000"
+   - "redis://192.168.203.128:7001"
+ filters:
+  exclude:
+   - /static/**
+   - /upload/**
+   - /resoures/**
+   - /swagger-resources/**
+   - /webjars/**
+   - /v2/**
+   - /pdp/v1/**
+   - /swagger-ui.html
+   - /configuration/ui
+   - /configuration/security
+   - /v1/token/**
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+spring:
+  application:
+    name: pdp-proxy
+  cloud:
+    config:
+      profile: test
+      discovery:
+        enabled: true
+        service-id: config1
+  autoconfigure:
+    exclude:
+     - org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
+     - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+  redis:
+    host: localhost
+  data:
+    redis:
+      repositories:
+        enabled: true
+  rabbitmq:
+    addresses: 192.168.203.128
+logging:
+  file: para-zta-pdp.log
+  path: /usr/local/pdp/logs
+grpc:
+  server:
+    port: 8082
