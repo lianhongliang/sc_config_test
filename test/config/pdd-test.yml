@@ -4,15 +4,14 @@ zta:
  jwt:
   secretKey: 0ee44ca9-ac9c-4c5f-bb42-f5a396884cd4
  base:
-  uri: http://localhost:8181
+  uri: http://192.168.1.248:8181
  auth:
   uri: http://mfa.paraview.cn
   contextPath: /sso
  redis:
-  cluster: true
-  address:   
-   - "redis://192.168.203.128:7000"
-   - "redis://192.168.203.128:7001"
+  cluster: false
+  address:
+   - "redis://192.168.1.140:6379"
  filters:
   exclude:
    - /static/**
@@ -50,7 +49,9 @@ spring:
       repositories:
         enabled: true
   rabbitmq:
-    addresses: 192.168.203.128
+    addresses: 192.168.1.248
+    username: lianhl
+    password: 123456
 logging:
   file: para-zta-pdp.log
   path: /usr/local/pdp/logs
