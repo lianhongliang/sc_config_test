@@ -58,3 +58,7 @@ logging:
 grpc:
   server:
     port: 8082
+ueba:
+  address: http://192.168.17.76:1500
+  interface:
+    getScore: /UEBA/v1/uebaData
