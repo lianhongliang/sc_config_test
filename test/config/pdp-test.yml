@@ -9,6 +9,7 @@ zta:
   uri: http://mfa.paraview.cn
   contextPath: /sso
  ueba:
+  enabled: false
   address: http://192.168.17.76:1500
   callMethod:
     getScore: /UEBA/v1/uebaData
