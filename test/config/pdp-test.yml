@@ -10,9 +10,9 @@ zta:
   contextPath: /sso
  ueba:
   enabled: true
-  address: http://192.168.17.76:1500
+  address: http://192.168.1.248:1500
   callMethod:
-    getScore: /UEBA/v1/uebaData
+    getScore: /uebaData
  redis:
   cluster: false
   address:
