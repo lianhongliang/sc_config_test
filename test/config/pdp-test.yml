@@ -54,10 +54,10 @@ spring:
     redis:
       repositories:
         enabled: true
-#  rabbitmq:
-#    addresses: 192.168.1.248
-#    username: lianhl
-#    password: 123456
+  rabbitmq:
+    addresses: 192.168.1.248
+    username: lianhl
+    password: 123456
 logging:
   file: para-zta-pdp.log
   path: /usr/local/pdp/logs
