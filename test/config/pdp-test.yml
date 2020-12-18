@@ -52,6 +52,7 @@ spring:
   redis:
     host: r-bp15ko2hw488ewjy5z.redis.rds.aliyuncs.com
     port: 6379
+    password: Parav1ew@2020
   data:
     redis:
       repositories:
