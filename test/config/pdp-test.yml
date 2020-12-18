@@ -4,19 +4,20 @@ zta:
  jwt:
   secretKey: 0ee44ca9-ac9c-4c5f-bb42-f5a396884cd4
  base:
-  uri: http://192.168.1.248:8181
+  uri: http://172.16.127.100:8181
  auth:
   uri: http://mfa.paraview.cn
   contextPath: /sso
  ueba:
   enabled: true
-  address: http://192.168.1.248:1500
+  address: http://172.16.127.100:1500
   callMethod:
     getScore: /uebaData
  redis:
   cluster: false
+  password: Parav1ew@2020
   address:
-   - "redis://192.168.1.140:6379"
+   - "redis://r-bp15ko2hw488ewjy5z.redis.rds.aliyuncs.com:6379"
  filters:
   exclude:
    - /static/**
@@ -49,13 +50,14 @@ spring:
      - org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
   redis:
-    host: fk01
+    host: r-bp15ko2hw488ewjy5z.redis.rds.aliyuncs.com
+    port: 6379
   data:
     redis:
       repositories:
         enabled: true
   rabbitmq:
-    addresses: 192.168.1.248
+    addresses: 172.16.127.100
     username: lianhl
     password: 123456
 logging:
