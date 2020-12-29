@@ -13,6 +13,11 @@ zta:
   address: http://172.16.127.100:1500
   callMethod:
     getScore: /uebaData
+ sso:
+  enabled: true
+  address: http://172.16.12.234:80/esc-sso/api/v1
+  callMethod:
+    getUserInfo: /userinfo
  redis:
   cluster: false
   password: Parav1ew@2020
