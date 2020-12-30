@@ -15,7 +15,7 @@ zta:
     getScore: /uebaData
  sso:
   enabled: true
-  address: http://172.16.12.234:80/esc-sso/api/v1
+  address: http://172.16.127.102:80/esc-sso/api/v1
   callMethod:
     getUserInfo: /userinfo
  redis:
