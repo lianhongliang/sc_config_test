@@ -20,7 +20,7 @@ zta:
       getUserInfo: /userinfo
   redis:
     cluster: false
-    password: 123456
+    password:
     address:
       - "redis://192.168.1.140:6379"
   filters:
@@ -57,7 +57,7 @@ spring:
   redis:
     host: fk01
     port: 6379
-    password: 123456
+    password:
   data:
     redis:
       repositories:
